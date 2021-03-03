@@ -4,7 +4,7 @@ import HomePage from './pages/homepage/homepage.comp.jsx';
 import ContactPage from './pages/contactpage/contactpage.comp.jsx';
 import PortfolioIndexPage from './pages/portfolio-index-page/portfolio-index-page.comp.jsx';
 
-import Header from './components/header/header.comp.jsx';
+import Navbar from './components/navbar/navbar.comp.jsx';
 import Footer from './components/footer/footer.comp.jsx';
 
 import './App.css';
@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Navbar />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/contact" component={ContactPage} />
