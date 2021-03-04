@@ -1,4 +1,7 @@
-
+* {
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+}
 
 .App {
   text-align: center;
