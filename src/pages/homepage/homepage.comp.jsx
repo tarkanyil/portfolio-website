@@ -7,11 +7,8 @@ import ButtonArrow from '../../components/button-arrow/button-arrow.comp.jsx';
 import Button from '../../components/button/button.comp.jsx';
 
 const HomePage = () => {
-  const hello = 'Homepage body';
   return (
     <div>
-      <h1>{hello}</h1>
-
       <Container>
         <img src={hero} alt="starter-photo" />
         <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>

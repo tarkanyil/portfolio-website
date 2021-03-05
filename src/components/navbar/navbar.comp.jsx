@@ -6,33 +6,38 @@ import {
   NavMenu,
   NavDropdown,
   NavDropdownItem,
-  Logo,
-} from './navbar-elements.jsx';
+  LogoIcon,
+  HamburgerIcon,
+  CloseIcon,
+} from './navbar.styles.jsx';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+  const handleBurgerClick = () => {
+    setOpen(!open);
+  }
 
   return (
     <>
       <Nav>
         <NavLink to="/">
-          <Logo />
+          <LogoIcon />
         </NavLink>
-        <Bars
-          onClick={() => {
-            setOpen(!open);
-          }}
-        />
+        {!open ? (
+          <HamburgerIcon
+            onClick={handleBurgerClick}
+          />
+        ) : (
+          <CloseIcon
+            onClick={handleBurgerClick}
+          />
+        )}
+
         <NavMenu>
-          <NavLink to="/" >
-            HOME
-          </NavLink>
-          <NavLink to="/portfolio" >
-            PORTFOLIO
-          </NavLink>
-          <NavLink to="/contact" >
-            CONTACT ME
-          </NavLink>
+          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/portfolio">PORTFOLIO</NavLink>
+          <NavLink to="/contact">CONTACT ME</NavLink>
         </NavMenu>
         {open && (
           <NavDropdown>
