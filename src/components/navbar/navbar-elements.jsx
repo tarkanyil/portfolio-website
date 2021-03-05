@@ -1,6 +1,8 @@
 import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { ReactComponent as LogoIcon } from '../../assets/images/logo.svg';
+import { colors } from '../../utils/constants.jsx';
 
 export const Nav = styled.nav`
   background: #000;
@@ -63,4 +65,8 @@ export const NavDropdownItem = styled(Link)`
   text-decoration: none;
   padding: 0 1rem;
   cursor: pointer;
+`;
+
+export const Logo = styled(LogoIcon)`
+  fill: ${colors.secondaryLightest};
 `;

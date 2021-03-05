@@ -6,8 +6,8 @@ import {
   NavMenu,
   NavDropdown,
   NavDropdownItem,
+  Logo,
 } from './navbar-elements.jsx';
-import logo from '../../assets/images/logo.svg';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <Nav>
         <NavLink to="/">
-          <img src={logo} alt="logo" />
+          <Logo />
         </NavLink>
         <Bars
           onClick={() => {
