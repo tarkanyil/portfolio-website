@@ -9,12 +9,15 @@ import { ReactComponent as LinkedInIcon } from '../../assets/images/icons/linked
 
 export const FooterContainer = styled.div`
   background: ${colors.primaryGrey};
-  margin-top: 20px;
 `;
 
 export const Logo = styled(LogoIcon)`
   fill: ${colors.secondaryLightest};
-  margin-top: 56px;
+`;
+
+export const LogoContainer = styled.div`
+  text-align: center;
+  padding-top: 56px;
   margin-bottom: 8px;
 `;
 
@@ -42,6 +45,12 @@ export const LinkedIn = styled(LinkedInIcon)`
   fill: ${colors.secondaryLightest};
 `;
 
+export const NavMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const MenuItem = styled(Link)`
   color: ${colors.secondaryLightest};
   font-family: Public Sans;
@@ -49,7 +58,6 @@ export const MenuItem = styled(Link)`
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 32px;

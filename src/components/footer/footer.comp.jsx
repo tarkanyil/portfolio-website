@@ -2,10 +2,12 @@ import React from 'react';
 
 import {
   FooterContainer,
+  LogoContainer,
   Logo,
   Github,
   Twitter,
   LinkedIn,
+  NavMenu,
   MenuItem,
   SocialLinks,
 } from './footer.styles.jsx';
@@ -13,12 +15,14 @@ import {
 const Footer = () => (
   <div>
     <FooterContainer>
-      <Logo />
-      <div>
+      <LogoContainer>
+        <Logo />
+      </LogoContainer>
+      <NavMenu>
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/portfolio">Portfolio</MenuItem>
         <MenuItem to="/contact">Contact me</MenuItem>
-      </div>
+      </NavMenu>
       <SocialLinks>
         <a href="https://github.com/" target="blank">
           <Github />

@@ -1,8 +1,14 @@
 import React from 'react';
-import Button from './button.styles.jsx';
+import { Btn, LinkText } from './button.styles.jsx';
 
-const Buttonn = ({ text }) => (
-    <Button>{text}</Button>
+const Button = ({ text, to }) => (
+  <div>
+
+      <LinkText to={to}>
+          <Btn type='button'>{text}</Btn>
+      </LinkText>
+
+  </div>
 );
 
-export default Buttonn;
+export default Button;

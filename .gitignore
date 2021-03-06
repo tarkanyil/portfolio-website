@@ -59,6 +59,7 @@ debug.log
 .env.test.local
 .env.production.local
 
+_notes.txt
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

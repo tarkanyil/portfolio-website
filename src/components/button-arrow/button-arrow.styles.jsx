@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/constants.jsx';
+import { NavLink as Link } from 'react-router-dom';
 
 export const ButtonContainer = styled.div`
   width: 200px;
