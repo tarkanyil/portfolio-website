@@ -57,6 +57,9 @@ export const NavMenu = styled.div`
 `;
 
 export const NavDropdown = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: ${colors.primaryGrey};
   width: 223px;
   height: 186px;
@@ -64,6 +67,36 @@ export const NavDropdown = styled.div`
   top: 56px;
   right: 0;
   padding: 8px 0 40px 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  animation: mymove 0.8s ease-out forwards;
+  animation-iteration-count: 1;
+
+  /* Safari and Chrome */
+  -webkit-animation: mymove 0.8s;
+  -webkit-animation-iteration-count: 1;
+
+  @keyframes mymove {
+    from {
+      top: 45px;
+      opacity: 0;
+    }
+    to {
+      top: 56px;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes mymove /* Safari and Chrome */ {
+    from {
+      top: 45px;
+      opacity: 0;
+    }
+    to {
+      top: 56px;
+      opacity: 1;
+    }
+  }
 `;
 
 export const NavDropdownItem = styled(Link)`
@@ -83,4 +116,3 @@ export const NavDropdownItem = styled(Link)`
   letter-spacing: 2px;
   text-transform: uppercase;
 `;
-
