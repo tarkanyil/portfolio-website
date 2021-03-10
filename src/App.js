@@ -10,10 +10,11 @@ import Navbar from './components/navbar/navbar.comp.jsx';
 import Footer from './components/footer/footer.comp.jsx';
 
 import './App.css';
+import { AppContainer } from './App.styles.jsx'
 
 function App() {
   return (
-    <div className="App">
+    <AppContainer className='App'>
       <Navbar />
       <Spacer size={40} />
       <Switch>
@@ -21,9 +22,8 @@ function App() {
         <Route exact path="/contact" component={ContactPage} />
         <Route exact path="/portfolio" component={PortfolioIndexPage} />
       </Switch>
-      <Spacer size={80} />
       <Footer />
-    </div>
+    </AppContainer>
   );
 }
 

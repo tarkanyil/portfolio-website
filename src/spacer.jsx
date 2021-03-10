@@ -13,4 +13,5 @@ const Spacer = styled.span`
   height: ${getHeight}px;
   min-height: ${getHeight}px;
 `;
+
 export default Spacer;

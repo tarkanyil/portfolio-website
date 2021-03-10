@@ -1,6 +1,18 @@
 import styled from 'styled-components';
 import { colors } from './utils/constants.jsx';
 
+export const AppContainer = styled.div`
+  min-width: 375px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #33323D;
+  box-sizing: border-box;
+  background-color: ${colors.secondaryLightest};
+  @media only screen and (min-width: 768px) {
+    
+  }
+`;
+
 export const H1 = styled.p`
   font-family: Ibarra Real Nova;
   font-style: normal;
@@ -49,4 +61,11 @@ export const Body2 = styled.p`
   line-height: 30px;
   margin: 0 !important;
   opacity: 0.8;
+`;
+
+export const TextWrapper = styled.div`
+  @media only screen and (min-width: 768px) {
+    flex: 0 0 ${props => props.width};
+  }
+
 `;

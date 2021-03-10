@@ -9,6 +9,7 @@ import { ReactComponent as LinkedInIcon } from '../../assets/images/icons/linked
 
 export const FooterContainer = styled.div`
   background: ${colors.primaryGrey};
+  width: 100%;
 `;
 
 export const Logo = styled(LogoIcon)`

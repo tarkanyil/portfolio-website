@@ -11,6 +11,8 @@ import {
   CloseIcon,
 } from './navbar.styles.jsx';
 
+import Spacer from '../../spacer.jsx';
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -36,7 +38,9 @@ const Navbar = () => {
 
         <NavMenu>
           <NavLink to="/">HOME</NavLink>
+          <Spacer size={42} />
           <NavLink to="/portfolio">PORTFOLIO</NavLink>
+          <Spacer size={43} />
           <NavLink to="/contact">CONTACT ME</NavLink>
         </NavMenu>
         {open && (

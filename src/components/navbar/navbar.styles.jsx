@@ -1,4 +1,3 @@
-import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { ReactComponent as Logo } from '../../assets/images/logo.svg';
@@ -12,7 +11,6 @@ export const Nav = styled.nav`
   margin: 32px auto 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
   position: relative;
 `;
@@ -29,7 +27,7 @@ export const CloseIcon = styled(Close)`
 export const HamburgerIcon = styled(Hamburger)`
   display: none;
   fill: ${colors.primaryGrey};
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: block;
     cursor: pointer;
   }
@@ -49,9 +47,8 @@ export const NavLink = styled(Link)`
 
 export const NavMenu = styled.div`
   display: flex;
-  align-items: center;
-  margin-right: 24px;
-  @media screen and (max-width: 768px) {
+  align-items: flex-end;
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;
@@ -69,13 +66,12 @@ export const NavDropdown = styled.div`
   padding: 8px 0 40px 0;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-  animation: mymove 0.8s ease-out forwards;
+  /* animation in */
+  animation: mymove 0.5s ease-out forwards;
   animation-iteration-count: 1;
-
   /* Safari and Chrome */
-  -webkit-animation: mymove 0.8s;
+  -webkit-animation: mymove 0.5s;
   -webkit-animation-iteration-count: 1;
-
   @keyframes mymove {
     from {
       top: 45px;

@@ -20,12 +20,9 @@ export const Btn = styled.div`
   &:hover {
     color: ${colors.secondaryLightest};
     background-color: ${colors.primaryGrey};
-    border: none;
   }
 `;
 
 export const LinkText = styled(Link)`
-
   text-decoration: none !important;
-
 `;
