@@ -9,7 +9,33 @@ import { ReactComponent as LinkedInIcon } from '../../assets/images/icons/linked
 
 export const FooterContainer = styled.div`
   background: ${colors.primaryGrey};
-  width: 100%;
+`;
+
+export const FooterContent = styled.div`
+  background: ${colors.primaryGrey};
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 768px) {
+    height: 80px;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+export const NavMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    width: 418px;
+    justify-content: space-between;
+  }
 `;
 
 export const Logo = styled(LogoIcon)`
@@ -20,36 +46,10 @@ export const LogoContainer = styled.div`
   text-align: center;
   padding-top: 56px;
   margin-bottom: 8px;
-`;
-
-export const SocialLinks = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
-  width: 104px;
-  height: 24px;
-  margin-top: 40px;
-  padding-bottom: 56px;
-  opacity: 0.5;
-`;
-
-export const Github = styled(GithubIcon)`
-  fill: ${colors.secondaryLightest};
-`;
-
-export const Twitter = styled(TwitterIcon)`
-  fill: ${colors.secondaryLightest};
-`;
-
-export const LinkedIn = styled(LinkedInIcon)`
-  fill: ${colors.secondaryLightest};
-`;
-
-export const NavMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export const MenuItem = styled(Link)`
@@ -64,4 +64,37 @@ export const MenuItem = styled(Link)`
   margin-top: 32px;
   text-decoration: none;
   display: block;
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+  }
 `;
+
+export const SocialLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 104px;
+  height: 24px;
+  margin-top: 40px;
+  padding-bottom: 56px;
+  opacity: 0.5;
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+export const Github = styled(GithubIcon)`
+  fill: ${colors.secondaryLightest};
+`;
+
+export const Twitter = styled(TwitterIcon)`
+  fill: ${colors.secondaryLightest};
+`;
+
+export const LinkedIn = styled(LinkedInIcon)`
+  fill: ${colors.secondaryLightest};
+`;
+
+

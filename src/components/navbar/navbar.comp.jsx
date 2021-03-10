@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Nav,
   NavLink,
-  Bars,
   NavMenu,
   NavDropdown,
   NavDropdownItem,
