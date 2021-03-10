@@ -36,11 +36,11 @@ const Navbar = () => {
         )}
 
         <NavMenu>
-          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/" activeClassName="active" exact={true}>HOME</NavLink>
           <Spacer size={42} />
-          <NavLink to="/portfolio">PORTFOLIO</NavLink>
+          <NavLink to="/portfolio" activeClassName="active">PORTFOLIO</NavLink>
           <Spacer size={43} />
-          <NavLink to="/contact">CONTACT ME</NavLink>
+          <NavLink to="/contact" activeClassName="active">CONTACT ME</NavLink>
         </NavMenu>
         {open && (
           <NavDropdown>

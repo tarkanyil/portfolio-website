@@ -10,9 +10,15 @@ export const Nav = styled.nav`
   width: 83%;
   margin: 32px auto 0 auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   z-index: 10;
   position: relative;
+  @media screen and (min-width: 767px) {
+    display: flex;
+    cursor: pointer;
+    width: 90%;
+  }
 `;
 
 export const LogoIcon = styled(Logo)`
@@ -33,23 +39,31 @@ export const HamburgerIcon = styled(Hamburger)`
   }
 `;
 
+export const NavMenu = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 311px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+`;
+
 export const NavLink = styled(Link)`
-  color: #000;
+  color: ${colors.primaryGrey};
   display: flex;
   align-items: center;
   text-decoration: none;
   height: 100%;
   cursor: pointer;
+  font-family: Public Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   &.active {
-    color: #15cdfc;
-  }
-`;
-
-export const NavMenu = styled.div`
-  display: flex;
-  align-items: flex-end;
-  @media screen and (max-width: 767px) {
-    display: none;
+    color: ${colors.primaryCyan};
   }
 `;
 
