@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
 import hero from '../../assets/images/homepage/mobile/image-homepage-hero@2x.jpg';
@@ -6,20 +6,18 @@ import profile from '../../assets/images/homepage/mobile/image-homepage-profile.
 import profile_tablet from '../../assets/images/homepage/tablet/image-homepage-profile.jpg';
 
 import {
-  Container,
-  Separator,
   WelcomeSection,
   WelcomeSubSection,
   AboutSection,
   ProfileImg,
   AboutRightSide,
-  InterestedSection,
 } from './homepage.styles.jsx';
-import { H2, Body2, TextWrapper } from '../../App.styles.jsx';
+import { H2, Body2, PageContainer, Separator } from '../../App.styles.jsx';
 import Spacer from '../../spacer.jsx';
 
 import ButtonArrow from '../../components/button-arrow/button-arrow.comp.jsx';
 import Button from '../../components/button/button.comp.jsx';
+import InterestedSection from '../../components/interested-section/interested-section.comp.jsx';
 
 const HomePage = () => {
   // Returns the actual viewport width so we can use it in our components
@@ -50,7 +48,6 @@ const HomePage = () => {
   const CondSpacer = (sizeMob, sizeTab) => {
     const { width } = useViewport();
     const lowerBreakpoint = 768;
-    console.log(sizeTab);
     // const higherBreakpoint = 1440;
     if ((!sizeTab) && (width > lowerBreakpoint)) { return null }
     return width < lowerBreakpoint ? (
@@ -69,7 +66,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Container>
+      <PageContainer>
         <WelcomeSection>
           {' '}
           <img src={hero} alt="starter-photo" />
@@ -120,19 +117,9 @@ const HomePage = () => {
 
         <Spacer size={115} />
 
-        <InterestedSection>
-          <TextWrapper width='350px'>
-            <H2>
-              Interested in doing a project together?
-            </H2>
-          </TextWrapper>
-          {CondSpacer(40, 32)}
-          {CondSeparator()}
-          {CondSpacer(0, 32)}
-          <Button to="/contact" text="CONTACT ME" />
-        </InterestedSection>
-        {CondSpacer(80, 96)}
-      </Container>
+        <InterestedSection />
+
+      </PageContainer>
     </div>
   );
 };

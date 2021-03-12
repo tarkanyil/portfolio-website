@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/constants.jsx';
 
-export const Container = styled.div`
+export const PageContainer = styled.div`
   width: 83%;
   margin-left: auto;
   margin-right: auto;
@@ -69,16 +69,4 @@ export const AboutRightSide = styled.div`
   text-align: left;
   align-items: left;
   justify-content: space-between;
-`;
-
-export const InterestedSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  @media only screen and (min-width: 768px) {
-    flex-direction: row;
-    text-align: left;
-    /* justify-content: space-between; */
-  }
 `;

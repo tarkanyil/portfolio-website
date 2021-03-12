@@ -9,8 +9,24 @@ export const AppContainer = styled.div`
   box-sizing: border-box;
   background-color: ${colors.secondaryLightest};
   @media only screen and (min-width: 768px) {
-    
+
   }
+`;
+
+export const PageContainer = styled.div`
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (min-width: 768px) {
+    width: 90%;
+  }
+`;
+
+export const Separator = styled.div`
+  width: 100%;
+  height: 1px;
+  background: #33323d;
+  opacity: 15%;
 `;
 
 export const H1 = styled.p`
