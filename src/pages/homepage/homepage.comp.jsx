@@ -16,8 +16,9 @@ import { H2, Body2, PageContainer, Separator } from '../../App.styles.jsx';
 import Spacer from '../../spacer.jsx';
 
 import ButtonArrow from '../../components/button-arrow/button-arrow.comp.jsx';
-import Button from '../../components/button/button.comp.jsx';
+import { ButtonLink } from '../../components/button/button.comp.jsx';
 import InterestedSection from '../../components/interested-section/interested-section.comp.jsx';
+import { PageMotion } from '../../utils/motions.jsx';
 
 const HomePage = () => {
   // Returns the actual viewport width so we can use it in our components
@@ -65,8 +66,9 @@ const HomePage = () => {
   };
 
   return (
-    <div>
+    <PageMotion>
       <PageContainer>
+        <Spacer mob='40' tab ='40' />
         <WelcomeSection>
           {' '}
           <img src={hero} alt="starter-photo" />
@@ -109,7 +111,7 @@ const HomePage = () => {
               work.
             </Body2>
             <Spacer size={24} />
-            <Button to="/portfolio" text="GO TO PORTFOLIO" />
+            <ButtonLink to="/portfolio" text="GO TO PORTFOLIO" />
             <Spacer size={51} />
             <Separator />
           </AboutRightSide>
@@ -120,7 +122,7 @@ const HomePage = () => {
         <InterestedSection />
 
       </PageContainer>
-    </div>
+    </PageMotion>
   );
 };
 

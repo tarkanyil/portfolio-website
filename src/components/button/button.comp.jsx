@@ -1,14 +1,22 @@
 import React from 'react';
-import { Btn, LinkText } from './button.styles.jsx';
+import { Btn, LinkInt, LinkExt } from './button.styles.jsx';
 
-const Button = ({ text, to }) => (
+export const ButtonLink = ({ text, to }) => (
   <div>
 
-      <LinkText to={to}>
+      <LinkInt to={to}>
           <Btn type='button'>{text}</Btn>
-      </LinkText>
+      </LinkInt>
 
   </div>
 );
 
-export default Button;
+export const ButtonHref = ({ text, to }) => (
+  <div>
+
+      <LinkExt href={to} target='_blank'>
+          <Btn type='button'>{text}</Btn>
+      </LinkExt>
+
+  </div>
+);

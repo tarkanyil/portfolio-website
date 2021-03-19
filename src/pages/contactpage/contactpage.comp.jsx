@@ -1,11 +1,13 @@
 import React from 'react';
+import { PageMotion } from '../../utils/motions.jsx';
 
 const ContactPage = () => {
   const hello = 'Contact page body';
+
   return (
-    <div>
+    <PageMotion>
       <h1>{hello}</h1>
-    </div>
+    </PageMotion>
   );
 };
 

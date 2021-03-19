@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { H2, TextWrapper, Separator } from '../../App.styles.jsx';
-import Button from '../../components/button/button.comp.jsx';
+import { ButtonLink } from '../../components/button/button.comp.jsx';
 import {
   Spacer,
   CondSeparator,
@@ -18,7 +18,7 @@ const InterestedSection = () => (
       <Spacer mob="40" tab="32" />
       <CondSeparator />
       <Spacer mob="0" tab="32" />
-      <Button to="/contact" text="CONTACT ME" />
+      <ButtonLink to="/contact" text="CONTACT ME" />
     </Interested>
     <Spacer mob="80" tab="96" />
   </div>

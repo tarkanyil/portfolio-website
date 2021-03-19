@@ -23,6 +23,10 @@ export const Btn = styled.div`
   }
 `;
 
-export const LinkText = styled(Link)`
+export const LinkInt = styled(Link)`
+  text-decoration: none !important;
+`;
+
+export const LinkExt = styled.a`
   text-decoration: none !important;
 `;

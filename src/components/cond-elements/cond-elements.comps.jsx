@@ -21,7 +21,7 @@ const lowerBreakpoint = 768;
 // const higherBreakpoint = 1440;
   
 // Returns the actual viewport width so we can use it in our components
-const useViewport = () => {
+export const useViewport = () => {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
