@@ -1,22 +1,26 @@
 import React from 'react';
-import { Btn, LinkInt, LinkExt } from './button.styles.jsx';
+import { Btn, BtnInv, LinkInt, LinkExt } from './button.styles.jsx';
 
-export const ButtonLink = ({ text, to }) => (
+export const ButtonLink = ({ text, to, inverted }) => (
   <div>
-
-      <LinkInt to={to}>
-          <Btn type='button'>{text}</Btn>
-      </LinkInt>
-
+    <LinkInt to={to}>
+      {inverted ? (
+        <BtnInv type="button">{text}</BtnInv>
+      ) : (
+        <Btn type="button">{text}</Btn>
+      )}
+    </LinkInt>
   </div>
 );
 
-export const ButtonHref = ({ text, to }) => (
+export const ButtonHref = ({ text, to, inverted }) => (
   <div>
-
-      <LinkExt href={to} target='_blank'>
-          <Btn type='button'>{text}</Btn>
-      </LinkExt>
-
+    <LinkExt href={to} target="_blank">
+      {inverted ? (
+        <BtnInv type="button">{text}</BtnInv>
+      ) : (
+        <Btn type="button">{text}</Btn>
+      )}
+    </LinkExt>
   </div>
 );

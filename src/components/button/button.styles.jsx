@@ -23,6 +23,15 @@ export const Btn = styled.div`
   }
 `;
 
+export const BtnInv = styled(Btn)`
+  color: ${colors.secondaryLightest};
+  background-color: ${colors.primaryGrey};
+  &:hover {
+    color: ${colors.primaryGrey};
+    background-color: ${colors.secondaryLightest};
+  }
+`;
+
 export const LinkInt = styled(Link)`
   text-decoration: none !important;
 `;
