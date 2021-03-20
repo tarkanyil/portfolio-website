@@ -11,6 +11,7 @@ export const ItemContainer = styled.div`
 
 export const ItemImage = styled.img`
     width: 100%;
+    max-height: 390px;
 `;
 
 export const ItemImageContainer = styled.div`
