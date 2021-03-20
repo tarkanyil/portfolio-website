@@ -31,7 +31,6 @@ export const MainDetails = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 28rem;
-  max-width: 800px;
   @media only screen and (min-width: 768px) {
     height: 15.5rem;
   }
