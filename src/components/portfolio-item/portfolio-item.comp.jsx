@@ -3,7 +3,15 @@ import React from 'react';
 import { portfolioItems as items } from '../../utils/constants.jsx';
 
 import { H2, H3, Body2, Separator } from '../../App.styles.jsx';
-import { Image, Desc, GreenText, MainDetails, MainDetailsContent } from './portfolio-item.styles.jsx';
+import {
+  Image,
+  Desc,
+  GreenText,
+  MainDetails,
+  MainDetailsContent,
+  DtRightSide,
+  ItemDetailsContainer,
+} from './portfolio-item.styles.jsx';
 import { PageMotion } from '../../utils/motions.jsx';
 
 import { ButtonHref } from '../button/button.comp.jsx';
@@ -30,44 +38,50 @@ const PortfolioItem = ({ projectId }) => {
   return (
     <PageMotion>
       <Image src={items[projectId].heroImg} alt="project header image" />
-      <Spacer mob="40" tab='40' />
+      <Spacer mob="40" tab="40" dt="115"/>
+      <ItemDetailsContainer>
+        <MainDetails>
+          <Separator className="upper-sep" />
 
-      <MainDetails>
-        <Separator className="upper-sep" />
+          <MainDetailsContent>
+            <H2>{items[projectId].title}</H2>
+            <Desc>{items[projectId].desc}</Desc>
+            <div>
+              <GreenText>{items[projectId].tasks}</GreenText>
+              <GreenText>{items[0].tech}</GreenText>
+            </div>
+            <div>
+              <ButtonHref
+                to={items[projectId].websiteURL}
+                text="Visit website"
+              />
+            </div>
+          </MainDetailsContent>
+          <Separator className="lower-sep" />
+        </MainDetails>
 
-        <MainDetailsContent>
-          <H2>{items[projectId].title}</H2>
-          <Desc>{items[projectId].desc}</Desc>
-          <div>
-            <GreenText>{items[projectId].tasks}</GreenText>
-            <GreenText>{items[0].tech}</GreenText>
-          </div>
-          <div>
-            <ButtonHref to={items[projectId].websiteURL} text="Visit website" />
-          </div>
-        </MainDetailsContent>
-
-        <Separator className="lower-sep" />
-      </MainDetails>
-
-      <Spacer mob="48" tab='40' />
-      <H3>Project Background</H3>
-      <Spacer mob="28" tab='40' />
-      <Body2>{items[projectId].projectBackground}</Body2>
-      <Spacer mob="40" tab='40' />
-      <H3>Static Previews</H3>
-      <Spacer mob="40" tab='40'/>
-      <Image src={items[projectId].prevImg1} alt="static preview image" />
-      <Spacer mob="33" tab='31' />
-      <Image src={items[projectId].prevImg2} alt="static preview image" />
-      <Spacer mob="65" tab='80' />
+        <DtRightSide>
+          <Spacer mob="48" tab="40" />
+          <H3>Project Background</H3>
+          <Spacer mob="28" tab="40" dt="28" />
+          <Body2>{items[projectId].projectBackground}</Body2>
+          <Spacer mob="40" tab="40" dt="40" />
+          <H3>Static Previews</H3>
+          <Spacer mob="40" tab="40" dt="28" />
+          <Image src={items[projectId].prevImg1} alt="static preview image" />
+          <Spacer mob="33" tab="31" dt="32" />
+          <Image src={items[projectId].prevImg2} alt="static preview image" />
+          <Spacer mob="65" tab="80" dt="64" />
+        </DtRightSide>
+      </ItemDetailsContainer>
       <Pager
         prev={prev}
         prevURL={`/portfolio/${prev.toLowerCase()}`}
         next={next}
         nextURL={`/portfolio/${next.toLowerCase()}`}
       />
-      <Spacer mob="64" tab='80' />
+
+      <Spacer mob="64" tab="80" dt="115" />
       <InterestedSection />
     </PageMotion>
   );

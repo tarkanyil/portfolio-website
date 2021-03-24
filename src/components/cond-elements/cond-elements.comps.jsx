@@ -17,9 +17,9 @@ const SpacerBlock = styled.span`
   min-height: ${getHeight}px;
 `;
 
-const lowerBreakpoint = 768;
-// const higherBreakpoint = 1440;
-  
+const lowerBreakpoint = 767;
+const higherBreakpoint = 1439;
+
 // Returns the actual viewport width so we can use it in our components
 export const useViewport = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -33,16 +33,18 @@ export const useViewport = () => {
   return { width };
 };
 
-export const Spacer = ( { mob, tab } ) => {
+export const Spacer = ({ mob, tab, dt }) => {
   const { width } = useViewport();
-  if (!tab && width > lowerBreakpoint) {
+  if ((!tab && width > lowerBreakpoint) || (!dt && width > higherBreakpoint)) {
     return null;
   }
-  return width < lowerBreakpoint ? (
-    <SpacerBlock size={mob} />
-  ) : (
-    <SpacerBlock size={tab} />
-  );
+  if (width > higherBreakpoint) {
+    return <SpacerBlock size={dt} />;
+  } else if (width > lowerBreakpoint) {
+    return <SpacerBlock size={tab} />;
+  } else {
+    return <SpacerBlock size={mob} />;
+  }
 };
 
 export const CondSeparator = () => {

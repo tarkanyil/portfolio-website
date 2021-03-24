@@ -25,6 +25,9 @@ export const FooterContent = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+  @media only screen and (min-width: 1440px) {
+    width: 77%
+  }
 `;
 
 export const NavMenu = styled.div`
@@ -82,6 +85,7 @@ export const SocialLinks = styled.div`
   @media only screen and (min-width: 768px) {
     margin: 0;
     padding: 0;
+    opacity: 1;
   }
 `;
 

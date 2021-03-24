@@ -15,24 +15,26 @@ import Navbar from './components/navbar/navbar.comp.jsx';
 import Footer from './components/footer/footer.comp.jsx';
 
 import './App.css';
-import { AppContainer } from './App.styles.jsx';
+import { AppContainer, PageContainer } from './App.styles.jsx';
 
 function App() {
   return (
     <AppContainer className="App">
-      <Navbar />
-      <Spacer mob="40" tab="94" />
-      <AnimatePresence exitBeforeEnter >
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/contact" component={ContactPage} />
-          <Route exact path="/portfolio" component={PortfolioIndexPage} />
-          <Route exact path="/portfolio/manage" component={ManagePage} />
-          <Route exact path="/portfolio/bookmark" component={BookmarkPage} />
-          <Route exact path="/portfolio/insure" component={InsurePage} />
-          <Route exact path="/portfolio/fylo" component={FyloPage} />
-        </Switch>
-      </AnimatePresence>
+      <PageContainer>
+        <Navbar />
+        <Spacer mob="40" tab="47" dt="54" />
+        <AnimatePresence exitBeforeEnter>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/contact" component={ContactPage} />
+            <Route exact path="/portfolio" component={PortfolioIndexPage} />
+            <Route exact path="/portfolio/manage" component={ManagePage} />
+            <Route exact path="/portfolio/bookmark" component={BookmarkPage} />
+            <Route exact path="/portfolio/insure" component={InsurePage} />
+            <Route exact path="/portfolio/fylo" component={FyloPage} />
+          </Switch>
+        </AnimatePresence>
+      </PageContainer>
       <Footer />
     </AppContainer>
   );

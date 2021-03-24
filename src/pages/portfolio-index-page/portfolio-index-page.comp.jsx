@@ -12,58 +12,49 @@ import {
   ItemContainer,
   ItemImage,
   ItemImageContainer,
-  WhiteSpace,
   ItemDescription,
 } from './portfolio-index-page.styles.jsx';
 
-import { H2, Body2, PageContainer, Separator } from '../../App.styles.jsx';
+import { H2, Body2, Separator } from '../../App.styles.jsx';
 
 const PortfolioIndexPage = () => {
   const { width } = useViewport();
   return (
     <PageMotion>
-      <PageContainer>
-        {items.map((item, idx) => {
-          let flexDirection;
-          if (width > 768) {
-            if (idx % 2 === 1) {
-              flexDirection = { 'flex-direction': 'row-reverse' };
-            } else {
-              flexDirection = { 'flex-direction': 'row' };
-            }
-          } else {
-            flexDirection = { 'flex-direction': 'column' };
-          }
-          return (
-            <div>
-              <ItemContainer style={flexDirection}>
-                <ItemImageContainer>
-                  <ItemImage src={item.img} alt="project image" />
-                </ItemImageContainer>
-                <Spacer mob="32" />
+      {items.map((item, idx) => {
+        let evenOdd;
+        if (((idx+1) % 2) === 0) {
+          evenOdd = 'even';
+        } else {
+          evenOdd = 'odd';
+        }
+        return (
+          <div>
+            <ItemContainer order={evenOdd}>
+              <ItemImageContainer>
+                <ItemImage src={item.img} alt="project image" />
+              </ItemImageContainer>
+              <Spacer mob="32" />
 
-                <WhiteSpace />
+              <ItemDescription order={evenOdd}>
+                <Separator />
+                <H2>{item.title}</H2>
+                <Body2>{item.desc}</Body2>
+                <ButtonLink
+                  to={`/portfolio/${item.title.toLowerCase()}`}
+                  text="VIEW PROJECT"
+                />
+                <Separator />
+              </ItemDescription>
+            </ItemContainer>
+            <Spacer mob="72" tab="80" dt="80" />
+          </div>
+        );
+      })}
 
-                <ItemDescription>
-                  <Separator />
-                  <H2>{item.title}</H2>
-                  <Body2>{item.desc}</Body2>
-                  <ButtonLink
-                    to={`/portfolio/${item.title.toLowerCase()}`}
-                    text="VIEW PROJECT"
-                  />
-                  <Separator />
-                </ItemDescription>
-              </ItemContainer>
-              <Spacer mob="72" tab="80" />
-            </div>
-          );
-        })}
+      <Spacer mob="8" tab="24" dt="70" />
 
-        <Spacer mob="8" tab="24" />
-
-        <InterestedSection />
-      </PageContainer>
+      <InterestedSection />
     </PageMotion>
   );
 };

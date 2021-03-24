@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/constants.jsx';
+import { H2 } from '../../App.styles.jsx';
 
 export const PageContainer = styled.div`
   width: 83%;
@@ -42,8 +43,16 @@ export const WelcomeSubSection = styled.div`
     padding-right: 90px;
     padding-top: 56px;
     position: absolute;
-    bottom: 23px;
+    bottom: 0;
     background-color: ${colors.secondaryLightest};
+  }
+  @media only screen and (min-width: 1440px) {
+    width: 445px;
+    height: 357px;
+    padding-right: 50px;
+    padding-top: 56px;
+    position: absolute;
+    bottom: 0;
   }
 `;
 
@@ -56,10 +65,16 @@ export const AboutSection = styled.div`
     flex-direction: row;
     gap: 69px;
   }
+  @media only screen and (min-width: 1440px) {
+    gap: 125px;
+  }
 `;
 
 export const ProfileImg = styled.img`
   width: 100%;
+  @media only screen and (min-width: 1440px) {
+    height: 600px;
+  }
 `;
 
 export const AboutRightSide = styled.div`
@@ -69,4 +84,16 @@ export const AboutRightSide = styled.div`
   text-align: left;
   align-items: left;
   justify-content: space-between;
+
+  @media only screen and (min-width: 1440px) {
+    padding-right: 95px;
+  }
+`;
+
+export const H2mod = styled(H2)`
+  @media only screen and (min-width: 1440px) {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+    letter-spacing: -0.45px;
+  }
 `;

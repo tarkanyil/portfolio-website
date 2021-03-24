@@ -5,12 +5,9 @@ export const AppContainer = styled.div`
   min-width: 375px;
   margin-left: auto;
   margin-right: auto;
-  color: #33323D;
+  color: #33323d;
   box-sizing: border-box;
   background-color: ${colors.secondaryLightest};
-  @media only screen and (min-width: 768px) {
-
-  }
 `;
 
 export const PageContainer = styled.div`
@@ -20,12 +17,15 @@ export const PageContainer = styled.div`
   @media only screen and (min-width: 768px) {
     width: 90%;
   }
+  @media only screen and (min-width: 1440px) {
+    width: 77%;
+  }
 `;
 
 export const Separator = styled.div`
   width: 100%;
   height: 1px;
-  background: #33323D;
+  background: #33323d;
   opacity: 15%;
 `;
 
@@ -81,7 +81,6 @@ export const Body2 = styled.p`
 
 export const TextWrapper = styled.div`
   @media only screen and (min-width: 768px) {
-    flex: 0 0 ${props => props.width};
+    flex: 0 0 ${(props) => props.width};
   }
-
 `;

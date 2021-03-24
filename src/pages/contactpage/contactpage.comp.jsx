@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 
 import { PageMotion } from '../../utils/motions.jsx';
 
-import { H2, Body2, PageContainer, Separator } from '../../App.styles.jsx';
+import { H2, Body2, Separator } from '../../App.styles.jsx';
 
 import { Button } from '../../components/button/button.comp.jsx';
 import { Spacer } from '../../components/cond-elements/cond-elements.comps.jsx';
@@ -18,6 +18,9 @@ import {
   Textarea,
   ErrorMsg,
   SocialLinks,
+  GetInTouch,
+  GetInTouchRight,
+  ContactMe,
 } from './contactpage.styles.jsx';
 
 const MyTextInput = ({ label, ...props }) => {
@@ -48,36 +51,41 @@ const MyTextInput = ({ label, ...props }) => {
 const ContactPage = () => {
   return (
     <PageMotion>
-      <PageContainer>
-        <Separator />
-        <Spacer mob="24" tab="32" />
+      <Separator />
+      <Spacer mob="24" tab="32" />
+      <GetInTouch>
         <H2>Get in Touch</H2>
         <Spacer mob="24" tab="24" />
-        <Body2>
-          I’d love to hear about what you’re working on and how I could help.
-          I’m currently looking for a new role and am open to a wide range of
-          opportunities. My preference would be to find a position in a company
-          in London. But I’m also happy to hear about opportunites that don’t
-          fit that description. I’m a hard-working and positive person who will
-          always approach each task with a sense of purpose and attention to
-          detail. Please do feel free to check out my online profiles below and
-          get in touch using the form.
-        </Body2>
-        <Spacer mob="24" tab="24" />
-        <SocialLinks>
-          <a href="https://github.com/" target="blank">
-            <Github />
-          </a>
-          <a href="https://www.twitter.com/" target="blank">
-            <Twitter />
-          </a>
-          <a href="https://www.linkedin.com" target="blank">
-            <LinkedIn />
-          </a>
-        </SocialLinks>
-        <Spacer mob="32" tab="32" />
-        <Separator />
-        <Spacer mob="32" tab="32" />
+        <GetInTouchRight>
+          <Body2>
+            I’d love to hear about what you’re working on and how I could help.
+            I’m currently looking for a new role and am open to a wide range of
+            opportunities. My preference would be to find a position in a
+            company in London. But I’m also happy to hear about opportunites
+            that don’t fit that description. I’m a hard-working and positive
+            person who will always approach each task with a sense of purpose
+            and attention to detail. Please do feel free to check out my online
+            profiles below and get in touch using the form.
+          </Body2>
+          <Spacer mob="24" tab="24" />
+          <SocialLinks>
+            <a href="https://github.com/" target="blank">
+              <Github />
+            </a>
+            <a href="https://www.twitter.com/" target="blank">
+              <Twitter />
+            </a>
+            <a href="https://www.linkedin.com" target="blank">
+              <LinkedIn />
+            </a>
+          </SocialLinks>
+          <Spacer mob="32" tab="32" />
+        </GetInTouchRight>
+      </GetInTouch>
+      <Separator />
+      <Spacer mob="32" tab="32" />
+
+      <ContactMe>
         <H2>Contact Me</H2>
         <Spacer mob="32" tab="32" />
 
@@ -126,11 +134,13 @@ const ContactPage = () => {
               placeholder="How can I help?"
             />
             <Spacer mob="24" tab="24" />
-            <Button type="submit" inverted>Send message</Button>
+            <Button type="submit" inverted>
+              Send message
+            </Button>
           </Form>
         </Formik>
-        <Spacer mob="80" tab="96" />
-      </PageContainer>
+      </ContactMe>
+      <Spacer mob="80" tab="96" />
     </PageMotion>
   );
 };

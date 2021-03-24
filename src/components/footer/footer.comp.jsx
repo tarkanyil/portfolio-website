@@ -14,8 +14,7 @@ import {
 } from './footer.styles.jsx';
 
 const Footer = () => (
-  <div>
-    <FooterContainer>
+  <FooterContainer>
       <FooterContent>
         <NavMenu>
           <LogoContainer>
@@ -37,8 +36,7 @@ const Footer = () => (
           </a>
         </SocialLinks>
       </FooterContent>
-    </FooterContainer>
-  </div>
+  </FooterContainer>
 );
 
 export default Footer;

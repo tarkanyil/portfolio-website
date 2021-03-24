@@ -7,7 +7,6 @@ import { colors } from '../../utils/constants.jsx';
 
 export const Nav = styled.nav`
   height: 32px;
-  width: 83%;
   margin: 32px auto 0 auto;
   display: flex;
   flex-direction: row;
@@ -17,7 +16,6 @@ export const Nav = styled.nav`
   @media screen and (min-width: 767px) {
     display: flex;
     cursor: pointer;
-    width: 90%;
   }
 `;
 

@@ -108,3 +108,23 @@ export const SocialLinks = styled.div`
     padding: 0;
   }
 `;
+
+export const GetInTouch = styled.div`
+  @media only screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
+
+export const GetInTouchRight = styled.div`
+  @media only screen and (min-width: 1440px) {
+    width: 51%;
+  }
+`;
+
+export const ContactMe = styled.div`
+  @media only screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
