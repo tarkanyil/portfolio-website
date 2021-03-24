@@ -24,3 +24,13 @@ export const ButtonHref = ({ text, to, inverted }) => (
     </LinkExt>
   </div>
 );
+
+export const Button = ({ children, inverted }) => (
+  <div>
+      {inverted ? (
+        <BtnInv type="button">{children}</BtnInv>
+      ) : (
+        <Btn type="button">{children}</Btn>
+      )}
+  </div>
+);

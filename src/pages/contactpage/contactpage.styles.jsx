@@ -45,6 +45,17 @@ export const Input = styled.input`
   ::placeholder {
     opacity: 0.8;
   }
+  :focus {
+    outline: none;
+    border: 1px solid ${colors.primaryCyan};
+  }
+  ${(props) => {
+    if (props.error) {
+      return `
+        outline: none;
+        border: 1px solid ${colors.secondaryRed};`;
+    }
+  }}
 `;
 
 export const Textarea = styled.textarea`
@@ -59,8 +70,41 @@ export const Textarea = styled.textarea`
   color: #33323d;
   border: none;
   padding-left: 1rem;
+  padding-top: 0.5rem;
   resize: none;
   ::placeholder {
     opacity: 0.8;
+  }
+  :focus {
+    outline: none;
+    border: 1px solid ${colors.primaryCyan};
+  }
+  ${(props) => {
+    if (props.error) {
+      return `
+        outline: none;
+        border: 1px solid ${colors.secondaryRed};`;
+    }
+  }}
+`;
+
+export const ErrorMsg = styled.div`
+  font-family: Public Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: ${colors.secondaryRed};
+  margin-top: 0.25rem;
+`;
+
+export const SocialLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 104px;
+  height: 24px;
+  @media only screen and (min-width: 768px) {
+    margin: 0;
+    padding: 0;
   }
 `;

@@ -1,9 +1,12 @@
 import React from 'react';
+import { Formik, Form, useField, Field } from 'formik';
+import * as Yup from 'yup';
+
 import { PageMotion } from '../../utils/motions.jsx';
 
 import { H2, Body2, PageContainer, Separator } from '../../App.styles.jsx';
 
-import { ButtonHref } from '../../components/button/button.comp.jsx';
+import { Button } from '../../components/button/button.comp.jsx';
 import { Spacer } from '../../components/cond-elements/cond-elements.comps.jsx';
 
 import {
@@ -13,14 +16,43 @@ import {
   Label,
   Input,
   Textarea,
+  ErrorMsg,
+  SocialLinks,
 } from './contactpage.styles.jsx';
+
+const MyTextInput = ({ label, ...props }) => {
+  const [field, meta] = useField(props);
+
+  let error;
+  // if (meta.error !== undefined) {
+  if (meta.touched && meta.error) {
+    error = true;
+  } else {
+    error = false;
+  }
+  console.log(meta, { error });
+  return (
+    <>
+      <Label htmlFor={props.id || props.name}>{label}</Label>
+      <Spacer mob="8" tab="8" />
+      {props.as === 'textarea' ? (
+        <Textarea className="text-input" error={error} {...field} {...props} />
+      ) : (
+        <Input className="text-input" error={error} {...field} {...props} />
+      )}
+      {meta.touched && meta.error ? <ErrorMsg>{meta.error}</ErrorMsg> : null}
+    </>
+  );
+};
 
 const ContactPage = () => {
   return (
     <PageMotion>
       <PageContainer>
         <Separator />
+        <Spacer mob="24" tab="32" />
         <H2>Get in Touch</H2>
+        <Spacer mob="24" tab="24" />
         <Body2>
           I’d love to hear about what you’re working on and how I could help.
           I’m currently looking for a new role and am open to a wide range of
@@ -31,7 +63,8 @@ const ContactPage = () => {
           detail. Please do feel free to check out my online profiles below and
           get in touch using the form.
         </Body2>
-        <div>
+        <Spacer mob="24" tab="24" />
+        <SocialLinks>
           <a href="https://github.com/" target="blank">
             <Github />
           </a>
@@ -41,23 +74,62 @@ const ContactPage = () => {
           <a href="https://www.linkedin.com" target="blank">
             <LinkedIn />
           </a>
-        </div>
+        </SocialLinks>
+        <Spacer mob="32" tab="32" />
         <Separator />
+        <Spacer mob="32" tab="32" />
         <H2>Contact Me</H2>
-        <form action="/" autoComplete='off'>
-          <Label htmlFor="name">Name</Label>
-          <Input type="text" id="name" placeholder="Jane Appleseed" autoComplete='off' />
-          <Label htmlFor="email">Email Address</Label>
-          <Input type="email" id="email" placeholder="email@example.com" autoComplete='off' />
-          <Label htmlFor="message">Message</Label>
-          <Textarea
-            type="textarea"
-            id="message"
-            rows="3"
-            placeholder="How can I help?"
-          />
-          <ButtonHref to="#" text="Send message" inverted />
-        </form>
+        <Spacer mob="32" tab="32" />
+
+        <Formik
+          initialValues={{
+            name: '',
+            email: '',
+            message: '',
+          }}
+          onSubmit={async (values, event) => {
+            event.preventDefault();
+            await new Promise((r) => setTimeout(r, 500));
+            alert(JSON.stringify(values, null, 2));
+          }}
+          validationSchema={Yup.object({
+            name: Yup.string().required('This field is required'),
+            email: Yup.string()
+              .email('Please use a valid email address')
+              .required('This field is required'),
+            message: Yup.string().required('This field is required'),
+          })}
+        >
+          <Form noValidate>
+            <MyTextInput
+              label="Name"
+              name="name"
+              type="text"
+              placeholder="Jane Appleseed"
+              autoComplete="off"
+            />
+            <Spacer mob="24" tab="24" />
+            <MyTextInput
+              label="Email Address"
+              name="email"
+              type="email"
+              placeholder="email@example.com"
+              autoComplete=""
+            />
+            <Spacer mob="24" tab="24" />
+            <MyTextInput
+              label="Message"
+              name="message"
+              type="text"
+              as="textarea"
+              rows="3"
+              placeholder="How can I help?"
+            />
+            <Spacer mob="24" tab="24" />
+            <Button type="submit" inverted>Send message</Button>
+          </Form>
+        </Formik>
+        <Spacer mob="80" tab="96" />
       </PageContainer>
     </PageMotion>
   );
