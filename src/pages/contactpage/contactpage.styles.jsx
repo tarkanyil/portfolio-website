@@ -113,12 +113,13 @@ export const GetInTouch = styled.div`
   @media only screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
 export const GetInTouchRight = styled.div`
   @media only screen and (min-width: 1440px) {
-    width: 51%;
+    width: 53%;
   }
 `;
 
@@ -126,5 +127,13 @@ export const ContactMe = styled.div`
   @media only screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+export const MyForm = styled.div`
+  width: 100%;
+  @media only screen and (min-width: 1440px) {
+    width: 53%;
   }
 `;

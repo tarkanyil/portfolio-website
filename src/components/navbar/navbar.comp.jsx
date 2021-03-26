@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+
+import OutsideClickHandler from 'react-outside-click-handler';
+
 import {
   Nav,
   NavLink,
   NavMenu,
+  NavDropdownContainer,
   NavDropdown,
   NavDropdownItem,
   LogoIcon,
@@ -15,7 +19,7 @@ import Spacer from '../../spacer.jsx';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const handleBurgerClick = () => {
+  const handleDropdownClick = () => {
     setOpen(!open);
   };
 
@@ -25,9 +29,9 @@ const Navbar = () => {
         <LogoIcon />
       </NavLink>
       {!open ? (
-        <HamburgerIcon onClick={handleBurgerClick} />
+        <HamburgerIcon onClick={handleDropdownClick}/>
       ) : (
-        <CloseIcon onClick={handleBurgerClick} />
+        <CloseIcon />
       )}
 
       <NavMenu>
@@ -44,32 +48,21 @@ const Navbar = () => {
         </NavLink>
       </NavMenu>
       {open && (
-        <NavDropdown>
-          <NavDropdownItem
-            to="/"
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            HOME
-          </NavDropdownItem>
-          <NavDropdownItem
-            to="/portfolio"
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            PORTFOLIO
-          </NavDropdownItem>
-          <NavDropdownItem
-            to="/contact"
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            CONTACT ME
-          </NavDropdownItem>
-        </NavDropdown>
+        <NavDropdownContainer>
+          <OutsideClickHandler onOutsideClick={handleDropdownClick}>
+            <NavDropdown>
+              <NavDropdownItem to="/" onClick={handleDropdownClick}>
+                HOME
+              </NavDropdownItem>
+              <NavDropdownItem to="/portfolio" onClick={handleDropdownClick}>
+                PORTFOLIO
+              </NavDropdownItem>
+              <NavDropdownItem to="/contact" onClick={handleDropdownClick}>
+                CONTACT ME
+              </NavDropdownItem>
+            </NavDropdown>
+          </OutsideClickHandler>
+        </NavDropdownContainer>
       )}
     </Nav>
   );

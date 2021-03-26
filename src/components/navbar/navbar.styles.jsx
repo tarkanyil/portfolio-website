@@ -14,8 +14,6 @@ export const Nav = styled.nav`
   z-index: 10;
   position: relative;
   @media screen and (min-width: 767px) {
-    display: flex;
-    cursor: pointer;
   }
 `;
 
@@ -63,6 +61,11 @@ export const NavLink = styled(Link)`
   &.active {
     color: ${colors.primaryCyan};
   }
+`;
+
+export const NavDropdownContainer = styled.div`
+  position: absolute;
+  right: 0;
 `;
 
 export const NavDropdown = styled.div`
@@ -113,6 +116,7 @@ export const NavDropdownItem = styled(Link)`
   flex-direction: column;
   justify-items: center;
   text-decoration: none;
+  text-align: center;
   padding: 0 1rem;
   margin-top: 32px;
   cursor: pointer;
