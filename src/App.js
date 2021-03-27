@@ -4,10 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import HomePage from './pages/homepage/homepage.comp.jsx';
 import ContactPage from './pages/contactpage/contactpage.comp.jsx';
 import PortfolioIndexPage from './pages/portfolio-index-page/portfolio-index-page.comp.jsx';
-import ManagePage from './pages/portfolio-detail-pages/manage.comp.jsx';
-import BookmarkPage from './pages/portfolio-detail-pages/bookmark.comp.jsx';
-import InsurePage from './pages/portfolio-detail-pages/insure.comp.jsx';
-import FyloPage from './pages/portfolio-detail-pages/fylo.comp.jsx';
+import PortfolioItem from './pages/portfolio-detail-page/portfolio-item-page.comp.jsx';
 
 import { Spacer } from './components/cond-elements/cond-elements.comps.jsx';
 
@@ -28,10 +25,11 @@ function App() {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/contact" component={ContactPage} />
             <Route exact path="/portfolio" component={PortfolioIndexPage} />
-            <Route exact path="/portfolio/manage" component={ManagePage} />
+            {/* <Route exact path="/portfolio/manage" component={ManagePage} />
             <Route exact path="/portfolio/bookmark" component={BookmarkPage} />
             <Route exact path="/portfolio/insure" component={InsurePage} />
-            <Route exact path="/portfolio/fylo" component={FyloPage} />
+            <Route exact path="/portfolio/fylo" component={FyloPage} /> */}
+            <Route exact path="/portfolio/:itemId" component={PortfolioItem} />
           </Switch>
         </AnimatePresence>
       </PageContainer>

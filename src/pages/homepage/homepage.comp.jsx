@@ -15,7 +15,6 @@ import {
   H2mod
 } from './homepage.styles.jsx';
 import { H2, Body2, Separator } from '../../App.styles.jsx';
-import Spacing from '../../spacer.jsx';
 import { Spacer } from '../../components/cond-elements/cond-elements.comps.jsx';
 import { useViewport } from '../../components/cond-elements/cond-elements.comps.jsx';
 
@@ -50,26 +49,12 @@ const HomePage = () => {
     );
   };
 
-  const CondSpacer = (sizeMob, sizeTab) => {
-    const { width } = useViewport();
-    const lowerBreakpoint = 768;
-    // const higherBreakpoint = 1440;
-    if (!sizeTab && width > lowerBreakpoint) {
-      return null;
-    }
-    return width < lowerBreakpoint ? (
-      <Spacing size={sizeMob} />
-    ) : (
-      <Spacing size={sizeTab} />
-    );
-  };
-
   return (
     <PageMotion>
       <WelcomeSection>
         {' '}
         {HeroImage()}
-        <Spacer size={24} />
+        <Spacer mob="24" />
         <WelcomeSubSection>
           <H2mod>Hey, I’m Alex Spencer and I love building beautiful websites</H2mod>
           <Spacer mob="32" tab="49" dt="53" />
@@ -84,8 +69,9 @@ const HomePage = () => {
       <AboutSection>
         {ProfileImage()}
         <AboutRightSide>
-          {CondSpacer(32)}
+          <Spacer mob="32" />
           <Separator />
+          <Spacer mob="32" />
           <H2>About Me</H2>
           <Body2>
             I’m a junior front-end developer looking for a new role in an
@@ -98,6 +84,7 @@ const HomePage = () => {
             for a walk, run or cycling. I’d love you to check out my work.
           </Body2>
           <ButtonLink to="/portfolio" text="GO TO PORTFOLIO" />
+          <Spacer mob="51" />
           <Separator />
         </AboutRightSide>
       </AboutSection>

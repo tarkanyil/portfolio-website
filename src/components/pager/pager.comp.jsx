@@ -7,8 +7,6 @@ import { ReactComponent as LeftArrow } from '../../assets/images/icons/arrow-lef
 import { ReactComponent as RightArrow } from '../../assets/images/icons/arrow-right.svg';
 
 const Pager = ({ prev, prevURL, next, nextURL }) => {
-  
-  console.log({prev}, {next}, {prevURL}, {nextURL})
 
   return (
     <PagerContainer>
