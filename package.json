@@ -41,7 +41,13 @@
     "rules": {
       "linebreak-style": 0,
       "object-curly-newline": "off"
-
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true
+      }
     }
   },
   "browserslist": {
