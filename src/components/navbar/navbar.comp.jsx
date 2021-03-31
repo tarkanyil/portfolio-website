@@ -35,7 +35,7 @@ const Navbar = () => {
       )}
 
       <NavMenu>
-        <NavLink to="/" activeClassName="active">
+        <NavLink to="/" activeClassName="active" exact>
           HOME
         </NavLink>
         <Spacer size={42} />
