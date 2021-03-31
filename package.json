@@ -41,7 +41,7 @@
     "rules": {
       "linebreak-style": 0,
       "object-curly-newline": "off",
-      "parserOptions": "warn"
+      "parserOptions": "off"
     }
   },
   "browserslist": {
