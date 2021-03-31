@@ -32,18 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "airbnb-base"
-    ],
-    "rules": {
-      "linebreak-style": 0,
-      "object-curly-newline": "off",
-      "parserOptions": "off"
-    }
-  },
+
   "browserslist": {
     "production": [
       ">0.2%",
