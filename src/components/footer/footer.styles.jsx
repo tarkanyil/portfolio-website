@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
-import { colors } from '../../utils/constants.jsx';
+import { colors } from '../../utils/constants';
 
 import { ReactComponent as LogoIcon } from '../../assets/images/logo.svg';
 import { ReactComponent as GithubIcon } from '../../assets/images/icons/github.svg';
@@ -100,5 +100,3 @@ export const Twitter = styled(TwitterIcon)`
 export const LinkedIn = styled(LinkedInIcon)`
   fill: ${colors.secondaryLightest};
 `;
-
-

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import { portfolioItems as items } from '../../utils/constants.jsx';
+import { portfolioItems as items } from '../../utils/constants';
 
-import { H2, H3, Body2, Separator } from '../../App.styles.jsx';
+import { H2, H3, Body2, Separator } from '../../App.styles';
 import {
   Image,
   Desc,
@@ -12,17 +12,17 @@ import {
   MainDetailsContent,
   DtRightSide,
   ItemDetailsContainer,
-} from './portfolio-item-page.styles.jsx';
-import { PageMotion } from '../../utils/motions.jsx';
+} from './portfolio-item-page.styles';
+import { PageMotion } from '../../utils/motions';
 
-import { ButtonHref } from '../../components/button/button.comp.jsx';
-import Pager from '../../components/pager/pager.comp.jsx';
-import InterestedSection from '../../components/interested-section/interested-section.comp.jsx';
-import { Spacer } from '../../components/cond-elements/cond-elements.comps.jsx';
+import { ButtonHref } from '../../components/button/button.comp';
+import Pager from '../../components/pager/pager.comp';
+import InterestedSection from '../../components/interested-section/interested-section.comp';
+import { Spacer } from '../../components/cond-elements/cond-elements.comp';
 
 const PortfolioItem = () => {
   const projectName = useParams().itemId;
-  const projectId = items.findIndex(({title}) => title.toLowerCase() === projectName);
+  const projectId = items.findIndex(({ title }) => title.toLowerCase() === projectName);
   let prev;
   let next;
   if (projectId === items.length - 1) {
@@ -39,7 +39,7 @@ const PortfolioItem = () => {
   return (
     <PageMotion>
       <Image src={items[projectId].heroImg} alt="project header image" />
-      <Spacer mob="40" tab="40" dt="115"/>
+      <Spacer mob="40" tab="40" dt="115" />
       <ItemDetailsContainer>
         <MainDetails>
           <Separator className="upper-sep" />

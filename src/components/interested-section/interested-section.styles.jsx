@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Interested = styled.div`
+const Interested = styled.div`
 display: flex;
 flex-direction: column;
 text-align: center;
@@ -11,3 +11,5 @@ align-items: center;
   /* justify-content: space-between; */
 }
 `;
+
+export default Interested;

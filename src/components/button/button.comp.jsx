@@ -1,5 +1,7 @@
 import React from 'react';
-import { Btn, BtnInv, LinkInt, LinkExt } from './button.styles.jsx';
+import {
+  Btn, BtnInv, LinkInt, LinkExt,
+} from './button.styles';
 
 export const ButtonLink = ({ text, to, inverted }) => (
   <div>
@@ -27,10 +29,10 @@ export const ButtonHref = ({ text, to, inverted }) => (
 
 export const Button = ({ children, inverted }) => (
   <div>
-      {inverted ? (
-        <BtnInv type="button">{children}</BtnInv>
-      ) : (
-        <Btn type="button">{children}</Btn>
-      )}
+    {inverted ? (
+      <BtnInv type="button">{children}</BtnInv>
+    ) : (
+      <Btn type="button">{children}</Btn>
+    )}
   </div>
 );

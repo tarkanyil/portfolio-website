@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { colors } from '../../utils/constants.jsx';
+import { colors } from '../../utils/constants';
 
 import { ReactComponent as GithubIcon } from '../../assets/images/icons/github.svg';
 import { ReactComponent as TwitterIcon } from '../../assets/images/icons/twitter.svg';
@@ -55,6 +55,7 @@ export const Input = styled.input`
         outline: none;
         border: 1px solid ${colors.secondaryRed};`;
     }
+    return null;
   }}
 `;
 
@@ -85,6 +86,7 @@ export const Textarea = styled.textarea`
         outline: none;
         border: 1px solid ${colors.secondaryRed};`;
     }
+    return null;
   }}
 `;
 

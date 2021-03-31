@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from './utils/constants.jsx';
+import { colors } from './utils/constants';
 
 export const AppContainer = styled.div`
   min-width: 375px;

@@ -12,9 +12,9 @@ import {
   LogoIcon,
   HamburgerIcon,
   CloseIcon,
-} from './navbar.styles.jsx';
+} from './navbar.styles';
 
-import Spacer from '../../spacer.jsx';
+import Spacer from '../../spacer';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -29,13 +29,13 @@ const Navbar = () => {
         <LogoIcon />
       </NavLink>
       {!open ? (
-        <HamburgerIcon onClick={handleDropdownClick}/>
+        <HamburgerIcon onClick={handleDropdownClick} />
       ) : (
         <CloseIcon />
       )}
 
       <NavMenu>
-        <NavLink to="/" activeClassName="active" exact={true}>
+        <NavLink to="/" activeClassName="active">
           HOME
         </NavLink>
         <Spacer size={42} />

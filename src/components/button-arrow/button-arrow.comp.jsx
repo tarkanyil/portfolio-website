@@ -5,7 +5,7 @@ import {
   ButtonSideOverlay,
   ButtonText,
   DownArrows,
-} from './button-arrow.styles.jsx';
+} from './button-arrow.styles';
 
 import downArrows from '../../assets/images/icons/down-arrows.svg';
 

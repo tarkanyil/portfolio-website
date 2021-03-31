@@ -1,3 +1,4 @@
+/* eslint indent: "off" */
 import styled from 'styled-components';
 
 export const ItemContainer = styled.div`
@@ -8,10 +9,9 @@ export const ItemContainer = styled.div`
     gap: 8%;
     ${(props) => {
       if (props.order === 'even') {
-        return `flex-direction: row-reverse; margin-left: auto;`;
+        return 'flex-direction: row-reverse; margin-left: auto;';
       } else {
-        return `flex-direction: row`;
-
+        return 'flex-direction: row';
       }
     }}
   }
@@ -48,11 +48,10 @@ export const ItemDescription = styled.div`
   @media only screen and (min-width: 1440px) {
     ${(props) => {
       if (props.order === 'odd') {
-        return `padding-right: 9%`;
+        return 'padding-right: 9%';
       } else {
-        return `padding-left: 9%`;
+        return 'padding-left: 9%';
       }
     }}
-
   }
 `;

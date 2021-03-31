@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ReactComponent as Logo } from '../../assets/images/logo.svg';
 import { ReactComponent as Close } from '../../assets/images/icons/close.svg';
 import { ReactComponent as Hamburger } from '../../assets/images/icons/hamburger.svg';
-import { colors } from '../../utils/constants.jsx';
+import { colors } from '../../utils/constants';
 
 export const Nav = styled.nav`
   height: 32px;

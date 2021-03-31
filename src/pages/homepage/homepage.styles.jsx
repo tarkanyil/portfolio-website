@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { colors } from '../../utils/constants.jsx';
-import { H2 } from '../../App.styles.jsx';
+import { colors } from '../../utils/constants';
+import { H2 } from '../../App.styles';
 
 export const PageContainer = styled.div`
   width: 83%;

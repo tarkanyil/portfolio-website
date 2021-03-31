@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import { colors } from '../../utils/constants.jsx';
 import { NavLink as Link } from 'react-router-dom';
+
+import styled from 'styled-components';
+import { colors } from '../../utils/constants';
 
 export const Btn = styled.div`
   width: 202px;

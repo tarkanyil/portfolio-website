@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
 
-import { colors } from '../../utils/constants.jsx';
+import { colors } from '../../utils/constants';
 
 export const PagerContainer = styled.div`
   display: flex;

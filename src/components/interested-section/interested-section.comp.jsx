@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import { H2, TextWrapper, Separator } from '../../App.styles.jsx';
-import { ButtonLink } from '../../components/button/button.comp.jsx';
+import { H2, TextWrapper } from '../../App.styles';
+import { ButtonLink } from '../button/button.comp';
 import {
   Spacer,
   CondSeparator,
-} from '../cond-elements/cond-elements.comps.jsx';
+} from '../cond-elements/cond-elements.comp';
 
-import { Interested } from './interested-section.styles';
+import Interested from './interested-section.styles';
 
 const InterestedSection = () => (
   <div>
@@ -20,7 +20,7 @@ const InterestedSection = () => (
       <Spacer mob="0" tab="32" dt="32" />
       <ButtonLink to="/contact" text="CONTACT ME" />
     </Interested>
-    <Spacer mob="80" tab="96" dt="150"/>
+    <Spacer mob="80" tab="96" dt="150" />
   </div>
 );
 

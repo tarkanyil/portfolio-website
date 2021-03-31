@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import styled from 'styled-components';
-import { Separator } from '../../App.styles.jsx';
+import { Separator } from '../../App.styles';
 
 function getHeight({ axis, size }) {
   return axis === 'horizontal' ? 1 : size;

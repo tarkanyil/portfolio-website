@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import hero from '../../assets/images/homepage/mobile/image-homepage-hero@2x.jpg';
-import hero_desktop from '../../assets/images/homepage/desktop/image-homepage-hero@2x.jpg';
+import heroDesktop from '../../assets/images/homepage/desktop/image-homepage-hero@2x.jpg';
 import profile from '../../assets/images/homepage/mobile/image-homepage-profile@2x.jpg';
-import profile_tablet from '../../assets/images/homepage/tablet/image-homepage-profile.jpg';
+import profileTablet from '../../assets/images/homepage/tablet/image-homepage-profile.jpg';
 
 import {
   WelcomeSection,
@@ -12,16 +12,15 @@ import {
   AboutSection,
   ProfileImg,
   AboutRightSide,
-  H2mod
-} from './homepage.styles.jsx';
-import { H2, Body2, Separator } from '../../App.styles.jsx';
-import { Spacer } from '../../components/cond-elements/cond-elements.comps.jsx';
-import { useViewport } from '../../components/cond-elements/cond-elements.comps.jsx';
+  H2mod,
+} from './homepage.styles';
+import { H2, Body2, Separator } from '../../App.styles';
+import { Spacer, useViewport } from '../../components/cond-elements/cond-elements.comp';
 
-import ButtonArrow from '../../components/button-arrow/button-arrow.comp.jsx';
-import { ButtonLink } from '../../components/button/button.comp.jsx';
-import InterestedSection from '../../components/interested-section/interested-section.comp.jsx';
-import { PageMotion } from '../../utils/motions.jsx';
+import ButtonArrow from '../../components/button-arrow/button-arrow.comp';
+import { ButtonLink } from '../../components/button/button.comp';
+import InterestedSection from '../../components/interested-section/interested-section.comp';
+import { PageMotion } from '../../utils/motions';
 
 const HomePage = () => {
   // Renders profile picture based on viewport width
@@ -33,7 +32,7 @@ const HomePage = () => {
     if (width >= higherBreakpoint || width < lowerBreakpoint) {
       image = profile;
     } else {
-      image = profile_tablet;
+      image = profileTablet;
     }
     return <ProfileImg id="aboutme" src={image} alt="profile-photo" />;
   };
@@ -43,9 +42,9 @@ const HomePage = () => {
     const { width } = useViewport();
     const higherBreakpoint = 1440;
     return width >= higherBreakpoint ? (
-      <img id="hero" src={hero_desktop} alt="hero-photo" />
+      <img id="hero" src={heroDesktop} alt="big size hero" />
     ) : (
-      <img id="hero" src={hero} alt="hero-photo" />
+      <img id="hero" src={hero} alt="hero" />
     );
   };
 

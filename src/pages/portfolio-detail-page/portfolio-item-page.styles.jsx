@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { colors } from '../../utils/constants.jsx';
-import { Body2 } from '../../App.styles.jsx';
+import { colors } from '../../utils/constants';
+import { Body2 } from '../../App.styles';
 
 export const ItemDetailsContainer = styled.div`
   @media only screen and (min-width: 1440px) {
