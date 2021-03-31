@@ -40,8 +40,8 @@
     ],
     "rules": {
       "linebreak-style": 0,
-      "object-curly-newline": "off",
-      "parserOptions": "module"
+      "object-curly-newline": "off"
+
     }
   },
   "browserslist": {

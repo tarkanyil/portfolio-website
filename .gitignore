@@ -24,6 +24,18 @@
 # production
 /build
 
+# linters
+.eslintcache/
+.eslintrc
+.eslintrc.yaml
+.eslintrc.json
+.eslintrc.js
+.stylelintcache/
+.stylelintrc
+.stylelintrc.yaml
+.stylelintrc.json
+.stylelintrc.js
+
 # misc
 .DS_Store
 .env.local
@@ -63,3 +75,5 @@ _notes.txt
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+fsadf
