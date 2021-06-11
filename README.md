@@ -7,7 +7,7 @@ This is a solution to the [Minimailist portfolio website challenge on Frontend M
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Link](#link-to-live-site)
+  - [Link to live site](#link-to-live-site)
  - [Built with](#built-with)
  - [Author](#author)
 
