@@ -1,4 +1,4 @@
-# Frontend Mentor - Calculator app solution
+# Frontend Mentor - Portfolio Site solution
 
 This is a solution to the [Minimailist portfolio website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/minimalist-portfolio-website-LMy-ZRyiE). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
