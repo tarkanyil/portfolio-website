@@ -45,5 +45,5 @@ Users should be able to:
 
 ## Author
 
-- GitHub Repository - [tarkanyil](https://www.your-site.com)
+- GitHub Repository - [tarkanyil](https://github.com/tarkanyil)
 - LinkedIn - [Laszlo Tarkanyi](https://www.linkedin.com/in/laszlo-tarkanyi-5803221b/)
