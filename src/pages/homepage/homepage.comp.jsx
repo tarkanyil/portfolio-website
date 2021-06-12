@@ -58,7 +58,7 @@ const HomePage = () => {
           <H2mod>Hey, I’m Alex Spencer and I love building beautiful websites</H2mod>
           <Spacer mob="32" tab="49" dt="53" />
           <Link to="aboutme" duration={1500} smooth="easeOutQuint" delay={100}>
-            <ButtonArrow href="#aboutme" />
+            <ButtonArrow />
           </Link>
         </WelcomeSubSection>
       </WelcomeSection>

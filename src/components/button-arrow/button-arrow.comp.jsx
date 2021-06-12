@@ -9,14 +9,12 @@ import {
 
 import downArrows from '../../assets/images/icons/down-arrows.svg';
 
-const ButtonArrow = ({ href }) => (
-  <a href={href}>
-    <ButtonContainer>
-      <ButtonText>ABOUT ME</ButtonText>
-      <ButtonSideOverlay />
-      <DownArrows src={downArrows} alt="down arrows" />
-    </ButtonContainer>
-  </a>
+const ButtonArrow = () => (
+  <ButtonContainer>
+    <ButtonText>ABOUT ME</ButtonText>
+    <ButtonSideOverlay />
+    <DownArrows src={downArrows} alt="down arrows" />
+  </ButtonContainer>
 );
 
 export default ButtonArrow;
