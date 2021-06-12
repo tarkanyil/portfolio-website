@@ -20,13 +20,14 @@ const PortfolioIndexPage = () => (
   <PageMotion>
     {items.map((item, idx) => {
       let evenOdd;
+      const key = idx;
       if ((idx + 1) % 2 === 0) {
         evenOdd = 'even';
       } else {
         evenOdd = 'odd';
       }
       return (
-        <div>
+        <div key={key}>
           <ItemContainer order={evenOdd}>
             <ItemImageContainer>
               <ItemImage src={item.img} alt="project image" />
